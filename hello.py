@@ -1,5 +1,4 @@
-from _collections import OrderedDict
-    # , namedtuple
+from _collections import OrderedDict, namedtuple
 
 import requests
 
@@ -13,6 +12,7 @@ od = OrderedDict([
 
 response = requests.get("https://vk.com")
 print(response.text)
+
 
 
 
