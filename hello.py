@@ -1,4 +1,4 @@
-from _collections import OrderedDict, namedtuple
+from _collections import OrderedDict
 
 import requests
 
