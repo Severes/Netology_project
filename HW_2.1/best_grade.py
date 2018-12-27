@@ -11,15 +11,12 @@ with open("grades.txt", encoding="utf-8") as text:
         int_marks = list()
         # for i in marks:
         #     int_marks.append(int(i))
-        # есть и другая конструкция вместо цикла for   ЭТО АХУЕННОЙ! ЗАПОМНИТЬ
+        # есть и другая конструкция вместо цикла for: (ЭТО НУЖНО ЗАПОМНИТЬ!)
         int_marks = [int(i) for i in marks]
-        # for m in marks:
-        #     int_marks.append(int(m))
-        # print(int_marks)
         avg_marks = sum(int_marks) / len(int_marks)
         if avg_marks > current_max:
             current_max = avg_marks
-            max_grade = line.strip()  # ПОНЯТЬ, ПОЧЕМУ ТУТ LINE?
+            max_grade = line.strip()
         # print("Название класса: {}".format(line))
         # print("средняя оценка {}".format(avg_marks))
         text.readline()
