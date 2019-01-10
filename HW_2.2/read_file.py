@@ -1,2 +1,2 @@
-with open('war-and-peace') as text:
-    print(text)
+with open('war-and-peace.txt', encoding='cp1251') as text:
+    print(text.read())
