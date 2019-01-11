@@ -1,6 +1,5 @@
 import chardet
 
-
 with open('war-and-peace.txt', 'rb') as text:
     text2 = text.read()
     print(text2)
