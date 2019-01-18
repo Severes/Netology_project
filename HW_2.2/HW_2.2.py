@@ -44,15 +44,22 @@ def sorted_key(key):
 
 # сортируем список по количеству повторений значений этого списка
 sorted_six_digit_list_count = sorted(six_digit_list_count, key=sorted_key, reverse=True)
-
 # print('Отсортированный список', sorted_six_digit_list_count)
+
+# На строках 34-36 данного скрипта
+# (x = item, six_digit_list.count(item)
+#     if x not in six_digit_list_count:
+#         six_digit_list_count.append(x))
+# мы составили список, в котором элементами кортежи.
+# Ниже мы элементы итогового списка превращаем в списки и выводим первый элемент этого списка
 
 hateful_10 = list()
 for a in range(10):
-    hateful_10.append(sorted_six_digit_list_count[a])
-    for b in hateful_10:
+    item_list = list(sorted_six_digit_list_count[a])
+    hateful_10.append(item_list[0])
 
-print('10 максимально повторяющихся слов из списка: ', hateful_10)
+# Выводим итоговый список строк
+print("10 максимально повторяющихся слов из списка: ", hateful_10)
 
 
 
