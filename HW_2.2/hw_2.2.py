@@ -24,7 +24,7 @@ with open('newsafr.txt', 'rb') as text:
     text_split = text3.split()
     # print(text_split)
     for word in text_split:
-        if len(word) > 5:
+        if len(word) > 6:
             six_digit_list.append(word)
 print('Слова с более чем 6 символами:', six_digit_list)
 
@@ -44,7 +44,6 @@ def sorted_key(key):
 
 # сортируем список по количеству повторений значений этого списка
 sorted_six_digit_list_count = sorted(six_digit_list_count, key=sorted_key, reverse=True)
-# print('Отсортированный список', sorted_six_digit_list_count)
 
 # На строках 34-36 данного скрипта
 # (x = item, six_digit_list.count(item)
@@ -52,7 +51,6 @@ sorted_six_digit_list_count = sorted(six_digit_list_count, key=sorted_key, rever
 #         six_digit_list_count.append(x))
 # мы составили список, в котором элементами кортежи.
 # Ниже мы элементы итогового списка превращаем в списки и выводим первый элемент этого списка
-
 hateful_10 = list()
 for a in range(10):
     item_list = list(sorted_six_digit_list_count[a])
@@ -60,8 +58,6 @@ for a in range(10):
 
 # Выводим итоговый список строк
 print("10 максимально повторяющихся слов из списка: ", hateful_10)
-
-
 
 
 
