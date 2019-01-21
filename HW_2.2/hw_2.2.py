@@ -15,14 +15,14 @@ import chardet
 
 # открываем файл и считываем весь текст построчно, попутно вычисляя кодировку и форматируя итоговый список
 # таким образом, чтобы отобрать слова с длинной от 6 символов
-with open('newsafr.txt', 'rb') as text:
+with open('newsfr.txt', 'rb') as text:
     six_digit_list = list()
     text2 = text.read()
     result = chardet.detect(text2)
     print(result)
     text3 = text2.decode(result['encoding'])
     text_split = text3.split()
-    # print(text_split)
+    print(text_split)
     for word in text_split:
         if len(word) > 6:
             six_digit_list.append(word)
