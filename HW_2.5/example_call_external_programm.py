@@ -1,9 +1,10 @@
 import subprocess
 
 
-print('---Start programm')
+print('---Start program')
 # вызвав данную программу в cmd, мы выполним то, что указано ниже в мараметре .run
-process = subprocess.run('python example_args.py') #, stdout=subprocess.PIPE)
+process = subprocess.run('python example_args.py 10 5 5') #, stdout=subprocess.PIPE)
+process = subprocess.run('calc', stdout=subprocess.PIPE)
 print('-----------------------------')
 print('args->', process.args)
 print('stdout->', process.stdout) # чтобы строка 6 возвращала данные в корректной кодировке, нужно

@@ -15,12 +15,9 @@ import os
 Выход из программы программировать не нужно.
 Достаточно принудительно остановить, для этого можете нажать Ctrl + C
 '''
-
+# Поехали...
 migrations = 'Migrations'
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Поехали...
-
 # создаем путь до папки с файлами
 migration_path = os.path.join(current_dir, migrations)
 # меняем рабочую директорию на папку Migrations с файлами
