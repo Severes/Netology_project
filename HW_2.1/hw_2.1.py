@@ -26,6 +26,7 @@ def get_shop_list_by_dish(dishes, person_count):
     for dish in dishes:
         for ingredients in recipe_book[dish]:
             new_shop_list_item = dict(ingredients)
+            print(new_shop_list_item)
             new_shop_list_item["quantity"] = int(new_shop_list_item["quantity"])
             new_shop_list_item["quantity"] *= person_count
             if new_shop_list_item["ingredient_name"] not in shop_list:
@@ -38,7 +39,7 @@ def get_shop_list_by_dish(dishes, person_count):
 def print_shop_list(shop_list):
     for shop_list_item in shop_list.values():
         print("{} {} {}".format(shop_list_item["ingredient_name"], shop_list_item["quantity"], shop_list_item["measure"]))
-
+        # print(shop_list)
 
 def create_shop_list():
     person_count = int(input("Введите количество человек: "))
